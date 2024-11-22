@@ -1,15 +1,15 @@
 .header {
     background: white;
     padding: 0;
-    border-bottom: 1px solid #2563eb;
+    border-bottom: 1px solid #233C67;
 }
 
 .header a {
-    color: #1e40af;
+    color: #233C67;
 }
 
 .header a:hover {
-    background: #2563eb;
+    background: #233C67;
     color: white;
     cursor: pointer;
 }
@@ -56,7 +56,7 @@
 }
 
 .cart_count {
-    background-color: #2563eb;
+    background-color: #233C67;
     color: white;
     padding: 0.1rem 0.45rem;
     border-radius: 100rem;
@@ -64,8 +64,8 @@
 }
 .logout_button {
     position: relative;
-    color: #1e40af;
-    font-size: 1.2rem;
+    color: #233C67;
+    font-size: inherit;
     width: 80%;
     height: 100%;
     border-radius: 5px;
@@ -73,7 +73,7 @@
   }
 
   .logout_button:hover {
-    background: #2563eb;
+    background: #233C67;
     color: whitesmoke;
     cursor: pointer;
   }

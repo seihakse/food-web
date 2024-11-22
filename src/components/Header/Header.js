@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function Header() {
     const user = {
-        name: 'John',
+        name: 'Seihak',
     };
 
     const cart = {
@@ -13,34 +13,44 @@ export default function Header() {
 
     const logout = () => {
         // logout logic here
+        console.log('User logged out');
     };
 
     return (
         <header className={classes.header}>
             <div className={classes.container}>
                 <Link to="/" className={classes.logo}>
-                    Food Mine!
+                    Foodee!
                 </Link>
                 <nav>
                     <ul>
                         {user ? (
                             <li className={classes.menu_container}>
-                                <Link to="/profile">{user.name}</Link>
+                                <Link to="/dashboard">{user.name}</Link>
                                 <div className={classes.menu}>
                                     <Link to="/profile">Profile</Link>
-                                    <Link to="/orders">Order</Link>
-                                    <button onClick={logout} className={classes.logout_button}>Logout</button>
-
+                                    <Link to="/orders">Orders</Link>
+                                    {/* Use button for logout */}
+                                    <button 
+                                        onClick={logout} 
+                                        className={classes.logout_button} // Optional for styling
+                                    >
+                                        Log Out
+                                    </button>
                                 </div>
                             </li>
                         ) : (
-                            <Link to="/login">Login</Link>
+                            <Link to="/login">Log in</Link>
                         )}
 
                         <li>
                             <Link to="/cart">
                                 Cart
-                                {cart.totalCount > 0 && <span className={classes.cart_count}>{cart.totalCount}</span>}
+                                {cart.totalCount > 0 && (
+                                    <span className={classes.cart_count}>
+                                        {cart.totalCount}
+                                    </span>
+                                )}
                             </Link>
                         </li>
                     </ul>
